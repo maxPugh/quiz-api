@@ -4,7 +4,7 @@ const { ValidationError, NotFoundError, InvalidOperationError } = require('./err
 
 async function saveQuizAsync(quiz) {
     quiz.name = (quiz.name || '').trim();
-    if (quiz.name == '') {
+    if (quiz.name == "") {
         throw new ValidationError('Blank quiz name');
     }
 
